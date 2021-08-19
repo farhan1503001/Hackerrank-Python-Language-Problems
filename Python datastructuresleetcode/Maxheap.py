@@ -61,8 +61,11 @@ class heappy():
             value=self.delete_heap()
             print(value,end=" ")
             sorted_numlist.append(value)
-
-
+    def peek(self):
+        if self.heap_array is None:
+            raise IndexError("Heap is empty")
+        else:
+            return self.heap_array[0]
     def print_heap(self):
         print()
         for value in self.heap_array:
@@ -72,10 +75,12 @@ class heappy():
 
 if __name__=='__main__':
     heap=heappy(10)
+    #print(heap.peek())
     arr=[80,75,60,68,55,40,52,67]
     [heap.insert_heap(value) for value in arr]
     heap.print_heap()
     heap.delete_heap()
+    print(heap.peek())
     heap.print_heap()
     heap.heap_sort()
     
