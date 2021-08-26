@@ -6,7 +6,7 @@ class solution():
         '''
         m=len(str1)+1
         n=len(str2)+1
-        dp=[[0]*n]*m
+        dp=[[0]*n for _ in range(m)]
         answer=0
         print(str1[3])
         for i in range(1,len(dp)):
