@@ -19,6 +19,6 @@ class solution():
         return self.answer
     
 if __name__=='__main__':
-    ans=solution().subsets([1,2,4])
+    ans=solution().subsets([0])
     print(ans)
             
